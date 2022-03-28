@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.error-icon,
+.error-text {
+	display: none;
+}
+html {
+	font-size: 16px;
+	font-family: 'Poppins', sans-serif;
+}
+#intro {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* background-image: url(./images/bg-intro-mobile.png); */
+	background-color: #eeeeee;
+	padding: 100px 0;
+}
+.navbar{
+	background-color: #0F044C;
+	min-height: 15vh;
+}
+.navbar h1{
+	color: rgb(255, 255, 255);
+	font-size: 4rem;
+	padding: 30px 30px;
+	line-height: 3rem;
+	font-family:'Junge';
+	font-weight: 100;
+}
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+	text-align: center;
+	padding: 0 0px;
+	max-width: 1300px;
+	margin: 0 auto;
+}
+.left-col {
+	flex: 1;
+	margin-bottom: 50px;
+}
+.left-col h1 {
+	color: rgb(0, 0, 0);
+	font-size: 2.5rem;
+	line-height: 3rem;
+	margin-bottom: 2rem;
+	font-weight: 100;
+	/* font-family: 'Anika'; */
+}
+.left-col p {
+	color: #000000;
+	font-size: 2rem;
+	line-height: 1.9rem;
+	/* max-width: 500px; */
+}
+.right-col {
+	flex: 1;
+}
+.right-col .top-card {
+	background-color: hsl(248, 32%, 49%);
+	color: white;
+	padding: 15px 90px;
+	/* border-bottom: 5px solid hsla(249, 10%, 26%, 0.466); */
+	border-radius: 15px;
+	box-shadow: 0 7px hsla(249, 10%, 26%, 0.404);
+	margin-bottom: 30px;
+}
+.right-col .top-card p {
+	font-size: 1.3rem;
+	line-height: 2.2rem;
+}
+.right-col .top-card p span {
+	font-weight: 700;
+}
+.right-col .form-container {
+	background-color: #141E61;
+	padding: 30px;
+	border-radius: 15px;
+	box-shadow: 10px 10px 10px #9eabff;
+}
+.field-group {
+	position: relative;
+	margin-bottom: 25px;
+}
+.top p{
+	color: white;
+	font-size: 2.0rem;
+	line-height: 1.9rem;
+	padding-bottom :15px;
+}
+.right-col label {
+	display: none;
+}
+.right-col input,
+.right-col button[type = submit] {
+	width: 100%;
+	height: 60px;
+	margin-bottom: 5px;
+	border-radius: 10px;
+	border: 1.3px solid hsl(246, 25%, 77%);
+	padding-left: 20px;
+	outline: none;
+	color: hsl(249, 10%, 26%);
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.1rem;
+	font-weight: 600;
+}
+.right-col input:focus {
+	border: 1.5px solid hsl(249, 10%, 26%);
+}
+.right-col input::placeholder {
+	color: hsla(249, 10%, 26%, 0.678);
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.1rem;
+	font-weight: 600;
+}
+.right-col input[type = button] {
+	cursor: pointer;
+	background-color: #35A4F4;
+	box-shadow: 4px 4px 4px #ffffff;
+	color: white;
+	font-weight: 500;
+	font-size: 1.3rem;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin-bottom: 10px;
+	border: none;
+}
+.right-col input[type = button]:hover {
+	background-color: #7dc4f7;
+	/* border: 1px solid; */
+  	box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  	outline-color: rgba(255, 255, 255, 0);
+  	outline-offset: 15px;
+  	text-shadow: 1px 1px 2px #427388;
+}
+.right-col .form-footer {
+	margin-top: 10px;
+	color: hsl(246, 25%, 77%);
+}
+.right-col .form-footer span {
+	color: #ff7a7a;
+	font-weight: 700;
+}
+.error-text {
+	text-align: right;
+	bottom: 0;
+	right: 0;
+	font-size: .8rem;
+	font-style: italic;
+	color: #ff7a7a;
+	font-weight: 100;
+}
+.error-icon {
+	position: absolute;
+	top: 0;
+	right: 20px;
+	top: 28%;
+}
+.field-group.error .error-text,
+.field-group.error .error-icon {
+	display: block;
+}
+.field-group.error input {
+	border: 2px solid hsl(0, 100%, 74%);
+}
+.buttonStyle{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+@media only screen and (min-width: 1000px) {
+	#intro {
+		/* background-image: url(./images/bg-intro-desktop.png); */
+	}
+	.container {
+		flex-direction: row;
+	}
+	.left-col {
+		text-align: left;
+		padding-right: 50px;
+	}
+	.left-col h1 {
+		font-size: 3rem;
+		line-height: 3.5rem;
+	}
+	.left-col p {
+		font-size: 1.1rem;
+	}
+	.right-col {
+		max-width: 500px;
+	}
+	.right-col .top-card p {
+		font-size: 1.1rem;
+	}
+	.right-col .top-card {
+		padding: 20px;
+	}
+	.right-col .form-container {
+		padding: 40px;
+		background-color: #141E61;
+	}
+	.right-col input::placeholder,
+	.right-col input {
+		font-size: 1.05rem;
+		height: 60px;
+	}
+	.right-col .form-footer {
+		margin-top: 20px;
+		font-size: .7rem;
+	}
+}
