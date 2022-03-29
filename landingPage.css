@@ -13,14 +13,14 @@ html {
 	font-family: 'Poppins', sans-serif;
 }
 #intro {
-	min-height: 100vh;
+	min-height: 84vh;
 	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	/* background-image: url(./images/bg-intro-mobile.png); */
 	background-color: #eeeeee;
-	padding: 100px 0;
+	padding: 0px 0;
 }
 .navbar{
 	background-color: #0F044C;
@@ -186,14 +186,14 @@ html {
 	}
 	.left-col {
 		text-align: left;
-		padding-right: 50px;
+		padding-right: 200px;
 	}
 	.left-col h1 {
-		font-size: 3rem;
+		font-size: 5rem;
 		line-height: 3.5rem;
 	}
 	.left-col p {
-		font-size: 1.1rem;
+		font-size: 1.5rem;
 	}
 	.right-col {
 		max-width: 500px;
