@@ -31,7 +31,6 @@ form.addEventListener('submit', (e) => {
 		}
 	});
 	signUp();
-	window.location.href ='../quiz guide page/quizGuide.html';
 });
 
 function validateEmail (email) {
@@ -62,8 +61,8 @@ function writeUserData(userId, first_name, last_name, email) {
 		email: email
 	}).then(() => {
 		console.log("data written");
-	  })
-  }
+	})
+}
 
 function signUp(){
 	console.log("signUp called");
@@ -76,8 +75,8 @@ function signUp(){
 	console.log(last_name);
 	console.log(email);
 	console.log(password);
-
-
+	
+	
 	if(validateEmail(email) == false || validatePassword(password) ==false){
 		alert("Email or Password in wrong format");
 		//I'm here na, even though you might not be able to hug me, but I'm always with you;
@@ -88,15 +87,16 @@ function signUp(){
 		alert("Name cannot be empty");
 		return;
 	}
-
+	
 	firebase.auth().createUserWithEmailAndPassword(email, password)
-  .then((userCredential) => { 
-    const user = userCredential.user;
-	console.log("auth done");
-	writeUserData(user.uid, first_name, last_name, email);
-  })
-  .catch((error) => {
-    const errorCode = error.code;
+	.then((userCredential) => { 
+		const user = userCredential.user;
+		console.log("auth done");
+		writeUserData(user.uid, first_name, last_name, email);
+		window.location.href ='../quiz guide page/quizGuide.html';
+	})
+	.catch((error) => {
+		const errorCode = error.code;
     const errorMessage = error.message;
 	console.log(errorCode);
 	alert(errorMessage);

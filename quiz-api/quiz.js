@@ -2,6 +2,7 @@ const _question = document.getElementById('question');
 const _options = document.querySelector('.quiz-options');
 const _checkBtn = document.getElementById('check-answer');
 const _playAgainBtn = document.getElementById('play-again');
+const _exitQuizBtn = document.getElementById('exit-quiz');
 const _result = document.getElementById('result');
 const _correctScore = document.getElementById('correct-score');
 const _totalQuestion = document.getElementById('total-question');
@@ -21,6 +22,7 @@ async function loadQuestion(){
 function eventListeners(){
     _checkBtn.addEventListener('click', checkAnswer);
     _playAgainBtn.addEventListener('click', restartQuiz);
+    _exitQuizBtn.addEventListener('click', exitQuiz);
 }
 
 document.addEventListener('DOMContentLoaded', function(){
@@ -101,6 +103,7 @@ function checkCount(){
 
         _result.innerHTML += `<p>Your score is ${correctScore}.</p>`;
         _playAgainBtn.style.display = "block";
+        _exitQuizBtn.style.display = "block";
         _checkBtn.style.display = "none";
     } else {
         setTimeout(function(){
@@ -123,4 +126,8 @@ function restartQuiz(){
     // setCount();
     // loadQuestion();
     window.location.href = '../quiz guide page/quizGuide.html';
+}
+
+function exitQuiz(){
+    window.location.href = '../landing page/index.html';
 }

@@ -139,6 +139,11 @@ body{
 }
 #play-again{
     display: none;
+    padding: 5px;
+}
+#exit-quiz{
+    display: none;
+    padding: 5px;
 }
 #result{
     padding: .7rem 0;

@@ -32,7 +32,6 @@ form.addEventListener('submit', (e) => {
 		}
 	});
 	logIn();
-	window.location.href ='../quiz guide page/quizGuide.html';
 });
 
 function validateEmail (email) {
@@ -67,6 +66,7 @@ function logIn(){
     // Signed in
     //var user = userCredential.user;
 	console.log("Log In success");
+	window.location.href ='../quiz guide page/quizGuide.html';
     // ...
   })
   .catch((error) => {
