@@ -18,8 +18,8 @@ html {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	/* background-image: url(./images/bg-intro-mobile.png); */
-	background-color: #eeeeee;
+	background-image: url("../images/backgroung_img.png");
+	background-color: #9fc9f6;
 	padding: 100px 0;
 }
 .navbar{

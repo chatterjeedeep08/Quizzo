@@ -41,7 +41,7 @@ function showQuestion(data){
     // console.log(correctAnswer);
 
     
-    _question.innerHTML = `<h2 class = "quiz-question"> Question ${askedCount+1} out of 10</h2>${data.question}`;
+    _question.innerHTML = `<h2 class = "quiz-question">Question ${askedCount+1} out of 10</h2>${data.question}`;
     // <br> <span class = "category"> ${data.category} </span>`;
     _options.innerHTML = `
         ${optionsList.map((option, index) => `
