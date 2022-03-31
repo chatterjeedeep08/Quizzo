@@ -1,3 +1,16 @@
+const firebaseConfig = {
+	apiKey: "AIzaSyDjyl9cLRRLKOIc98tcwZeotQJPto79Ssw",
+	authDomain: "quizzo-e5530.firebaseapp.com",
+	databaseURL: "https://quizzo-e5530-default-rtdb.asia-southeast1.firebasedatabase.app/",
+	projectId: "quizzo-e5530",
+	storageBucket: "quizzo-e5530.appspot.com",
+	messagingSenderId: "45527319469",
+	appId: "1:45527319469:web:88e4fbd64cae415c3ad724"
+};
+
+const app = firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+const db = firebase.firestore();
 const form = document.querySelector('.form-container form');
 const inputs = document.querySelectorAll('.form-container input');
 
@@ -18,9 +31,48 @@ form.addEventListener('submit', (e) => {
 			}
 		}
 	});
+	logIn();
+	window.location.href ='../quiz guide page/quizGuide.html';
 });
 
 function validateEmail (email) {
 	var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 	return re.test(String(email).toLowerCase());
+}
+
+function validatePassword(password){
+	if(password <6){
+		return false;
+	}
+	else{
+		return true;
+	}
+}
+
+function logIn(){
+	console.log("logIn called");
+	// first_name= document.getElementById('first-name').value;
+	// last_name= document.getElementById('last-name').value;
+	email= document.getElementById('Email').value;
+	password= document.getElementById('password').value;
+
+	if(validateEmail(email) == false || validatePassword(password) ==false){
+		alert("Email or Password in wrong format");
+		//I'm here na, even though you might not be able to hug me, but I'm always with you;
+		return;
+	}
+
+	firebase.auth().signInWithEmailAndPassword(email, password)
+  .then((userCredential) => {
+    // Signed in
+    //var user = userCredential.user;
+	console.log("Log In success");
+    // ...
+  })
+  .catch((error) => {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+	alert(errorMessage);
+	console.log(errorCode);
+  });
 }

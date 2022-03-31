@@ -31,6 +31,7 @@ form.addEventListener('submit', (e) => {
 		}
 	});
 	signUp();
+	window.location.href ='../quiz guide page/quizGuide.html';
 });
 
 function validateEmail (email) {
