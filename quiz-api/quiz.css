@@ -103,8 +103,8 @@ body{
 }
 /* js related */
 .selected{
-    background-color: var(--grey-color)!important;
-    color: var(--dark-color)!important;
+    background-color:#a15fde!important ;
+    color: #ffffff;
     border-color: var(--grey-color)!important;
     box-shadow: 0 4px 0 0 #bbbbbb!important;
 }
@@ -120,8 +120,8 @@ body{
     text-transform: uppercase;
     cursor: pointer;
     display: block;
-    background-color: var(--grey-color);
-    color: var(--dark-color);
+    background-color: #040c53;
+    color: #ffffff;
     letter-spacing: 2px;
     transition: var(--transition);
     box-shadow: 0 4px 0 0 #bbbbbb;
