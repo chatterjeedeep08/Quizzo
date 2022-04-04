@@ -54,6 +54,10 @@ function validateName(name){
 	}
 }
 
+function changeWindow(){
+	window.location.href ='../quiz guide page/quizGuide.html';
+}
+
 function writeUserData(userId, first_name, last_name, email) {
 	db.collection("Users").doc(userId).set({
 		first_name: first_name,
@@ -61,6 +65,9 @@ function writeUserData(userId, first_name, last_name, email) {
 		email: email
 	}).then(() => {
 		console.log("data written");
+		setTimeout(function(){
+			popup.classList.toggle("popupShow");
+		}, 800);
 	})
 }
 
@@ -70,6 +77,7 @@ function signUp(){
 	last_name= document.getElementById('last-name').value;
 	email= document.getElementById('Email').value;
 	password= document.getElementById('password').value;
+	popup = document.getElementById('popup');
 	
 	console.log(first_name);
 	console.log(last_name);
@@ -93,7 +101,6 @@ function signUp(){
 		const user = userCredential.user;
 		console.log("auth done");
 		writeUserData(user.uid, first_name, last_name, email);
-		window.location.href ='../quiz guide page/quizGuide.html';
 	})
 	.catch((error) => {
 		const errorCode = error.code;
