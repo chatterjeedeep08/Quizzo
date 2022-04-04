@@ -175,7 +175,7 @@ html {
 }
 @media only screen and (min-width: 1000px) {
 	#intro {
-		/* background-image: url(./images/bg-intro-desktop.png); */
+		background-image: url("../images/backgroung_img.png");
 	}
 	.container {
 		flex-direction: row;
