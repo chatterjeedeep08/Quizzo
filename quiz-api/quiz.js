@@ -1,8 +1,8 @@
 const _question = document.getElementById('question');
 const _options = document.querySelector('.quiz-options');
 const _checkBtn = document.getElementById('check-answer');
-const _playAgainBtn = document.getElementById('play-again');
-const _exitQuizBtn = document.getElementById('exit-quiz');
+const _endQuizBtn = document.getElementById('end-quiz');
+//const _exitQuizBtn = document.getElementById('exit-quiz');
 const _result = document.getElementById('result');
 const _correctScore = document.getElementById('correct-score');
 const _totalQuestion = document.getElementById('total-question');
@@ -21,8 +21,8 @@ async function loadQuestion(){
 // event listeners
 function eventListeners(){
     _checkBtn.addEventListener('click', checkAnswer);
-    _playAgainBtn.addEventListener('click', restartQuiz);
-    _exitQuizBtn.addEventListener('click', exitQuiz);
+    _endQuizBtn.addEventListener('click', endQuiz);
+    //_exitQuizBtn.addEventListener('click', exitQuiz);
 }
 
 document.addEventListener('DOMContentLoaded', function(){
@@ -101,9 +101,9 @@ function checkCount(){
         }, 5000);
 
 
-        _result.innerHTML += `<p>Your score is ${correctScore}.</p>`;
-        _playAgainBtn.style.display = "block";
-        _exitQuizBtn.style.display = "block";
+        //_result.innerHTML += `<p>Your score is ${correctScore}.</p>`;
+        _endQuizBtn.style.display = "block";
+        //_exitQuizBtn.style.display = "block";
         _checkBtn.style.display = "none";
     } else {
         setTimeout(function(){
@@ -118,16 +118,20 @@ function setCount(){
 }
 
 
-function restartQuiz(){
+function endQuiz(){
     // correctScore = askedCount = 0;
     // _playAgainBtn.style.display = "none";
     // _checkBtn.style.display = "block";
     // _checkBtn.disabled = false;
     // setCount();
     // loadQuestion();
-    window.location.href = '../quiz guide page/quizGuide.html';
+    var score = correctScore;
+    localStorage.setItem("score", score);
+    //localStorage.setItem("score", score);
+    console.log(localStorage.getItem('score'));
+    window.location.href = '../result page/result.html';
 }
 
-function exitQuiz(){
-    window.location.href = '../landing page/index.html';
-}
+// function exitQuiz(){
+//     window.location.href = '../landing page/index.html';
+// }

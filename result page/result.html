@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="result.css">
+  
+  <title>Result page</title>
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: #3e52a3; }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <h1>Quizzo</h1>
+  </div>
+  <section id="intro">
+    <div class="container">
+      <div class="result" id="result">
+        <img src="../images/crown.png" height="30%" width="30%">
+        <h1>Congrats!</h1>
+      </div>
+      <!-- <div class="right-col">
+        <div class="form-container">
+          <form action="#">
+            <div class="top">
+              <p>Sign Up</p>
+            </div>
+            <div class="field-group">
+              <label for="first-name">First Name</label>
+              <input name='first-name' id="first-name" type="text" placeholder="First Name">
+              <img src="../images/icon-error.svg" class="error-icon" alt="">
+              <p class="error-text">First Name cannot be empty</p>              
+            </div>
+            <div class="field-group">
+              <label for="last-name">last Name</label>
+              <input name='last-name' id="last-name" type="text" placeholder="Last Name">
+              <img src="../images/icon-error.svg" class="error-icon" alt="">
+              <p class="error-text">Last Name cannot be empty</p>              
+            </div>
+            <div class="field-group">
+              <label for="Email">Email Address</label>
+              <input name='Email' id="Email" value="" type="email" placeholder="Email Address">
+              <img src="../images/icon-error.svg" class="error-icon" alt="">
+              <p class="error-text">Looks like this is not email</p>              
+            </div>
+            <div class="field-group">
+              <label for="password">Password Address</label>
+              <input name='password' id="password" value="" type="password" placeholder="Password">
+              <img src="../images/icon-error.svg" class="error-icon" alt="">
+              <p class="error-text">Password cannot be empty</p>              
+            </div>
+            <button type="submit">Lets Go! </button>
+          </form>
+        </div>
+        
+      </div> -->
+    </div>
+  </section>
+</body>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script src="./result.js"></script>
+</html>

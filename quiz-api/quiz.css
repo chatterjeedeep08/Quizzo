@@ -115,7 +115,8 @@ body{
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     font-weight: 600;
-    padding: .5rem 1rem;    
+    padding: 20px;
+    width: 20%;    
     margin: 0 auto 0 auto;
     text-transform: uppercase;
     cursor: pointer;
@@ -127,8 +128,9 @@ body{
     box-shadow: 0 4px 0 0 #bbbbbb;
 }
 .quiz-foot button:hover{
-    background-color: #e6e6e6;
+    background-color: #eeeeee;
     box-shadow: 0 4px 0 0 #a7a7a7;
+    color: #000000;
 }
 .quiz-foot button:active{
     transform: scale(0.95);
@@ -137,14 +139,15 @@ body{
     padding: 30px;
 
 }
-#play-again{
+#end-quiz{
+    display: none;
+    padding: 15px;
+    width: 20%;
+}
+/* #exit-quiz{
     display: none;
     padding: 5px;
-}
-#exit-quiz{
-    display: none;
-    padding: 5px;
-}
+} */
 #result{
     padding: .7rem 0;
     text-align: center;
