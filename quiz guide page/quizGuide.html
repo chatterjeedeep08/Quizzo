@@ -8,7 +8,7 @@
   <title> Quizzo App</title>
 
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution { font-size: 11px; text-align: left; }
     .attribution a { color: #3e52a3; }
   </style>
 </head>
@@ -16,22 +16,46 @@
   <div class="navbar">
     <h1>Quizzo</h1>
   </div>
+  
   <section id="intro">
-    <div class="container">
-      <div class="left-col">
-        
-          <!-- <h1>Quiz Rules are :</h1> -->
-         <p>Quiz Rules:</p>
-      </div>
-      <div class="right-col">
+
+    <div id="container">
+   
+
+      <!--    Guide Section    -->
+      <div id="guide">
+         <i> <h2>Quiz Guidelines :</h2></i>
+          <h4>1. Questions are of Multiple Choice. </h4>
+          <h4>2. There are a total of 10 questions.</h4>
+          <h4>3. Each question carries one mark.</h4>
+          <h4>4. No negative marking for wrong answers.</h4>
+          <h4>5. After completion, your score will be displayed.</h4>
+      </div> 
+      <div id="button">
+        <button type= "submit" id="exit" onclick="window.location.href='../quiz-api/quiz.html'">Start Quiz</button>
+        <button type= "submit" id="continue" onclick="window.location.href='../landing page/index.html'">Go Back</button>
+    </div>  
+    </div>   
+    <!-- <div class="left-col">
+      
+        <h2>Quiz Rules are :</h2>
+       <p>Quiz Rules:</p> -->
+    <!-- </div> -->
+
+
+    <!-- <div class="container"> -->
+      <!-- <div class="right-col">
+        <button type="submit" class="green margin-right" value="Start quiz" onclick="window.location.href='../quiz-api/quiz.html'" >Confirm </button>
+         <button type="submit" class="magenta" value="Go back" onclick="window.location.href='../landing page/index.html'" >Cancel</button> -->
+
         <!-- <div class="form-container"> -->
-          <form class="buttonStyle"><input type="button" value="Start quiz" onclick="window.location.href='../quiz-api/quiz.html'"/></form>
-          <form class="buttonStyle"><input type="button" value="Go back" onclick="window.location.href='../landing page/index.html'"/></form>
+          <!-- <form class="buttonStyle"><input type="button" value="Start quiz" onclick="window.location.href='../quiz-api/quiz.html'"/></form>
+          <form class="buttonStyle"><input type="button" value="Go back" onclick="window.location.href='../landing page/index.html'"/></form> -->
           <!-- <form class="buttonStyle"><input type="button" value="Go to Sign Up" onclick="window.location.href='../sign up page/signUp.html'"/></form> -->
         <!-- </div> -->
         
-      </div>
-    </div>
+      <!-- </div> -->
+    <!-- </div> -->
   </section>
 
   
