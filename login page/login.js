@@ -57,7 +57,7 @@ function logIn(){
 
 	if(validateEmail(email) == false || validatePassword(password) ==false){
 		alert("Email or Password in wrong format");
-		//I'm here na, even though you might not be able to hug me, but I'm always with you;
+		
 		return;
 	}
 
