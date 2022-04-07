@@ -58,6 +58,7 @@ html {
 #guide h2 {
     font-size: 50px;
     color: #110301;
+	margin: 20px;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #guide h4 {
