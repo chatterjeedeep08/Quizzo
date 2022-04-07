@@ -14,9 +14,11 @@ const db = firebase.firestore();
 const form = document.querySelector('.form-container form');
 const inputs = document.querySelectorAll('.form-container input');
 const score = localStorage.getItem('score');
+const fname = localStorage.getItem('first_name');
 console.log(score);
 
 _result = document.getElementById("result");
+_result.innerHTML += `<h1>Congrats ${fname}!</h1>`;
 _result.innerHTML += `<p>Your score is ${score}</p>`;
 _result.innerHTML += `<button onclick="restartQuiz()">Restart Quiz</button><br>`;
 _result.innerHTML += `<button onclick="endQuiz()">End Quiz</button>`;

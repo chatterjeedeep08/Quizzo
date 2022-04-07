@@ -48,6 +48,23 @@ function validatePassword(password){
 	}
 }
 
+function getUserData(email){
+	var docRef = db.collection("Users").doc(email);
+
+	docRef.get().then((doc) => {
+		if (doc.exists) {
+			console.log("Document data:", doc.data());
+			var first_name = data.first_name;
+			localStorage.setItem("first_name", first_name);
+		} else {
+			// doc.data() will be undefined in this case
+			console.log("No such document!");
+		}
+	}).catch((error) => {
+		console.log("Error getting document:", error);
+	});
+}
+
 function logIn(){
 	console.log("logIn called");
 	// first_name= document.getElementById('first-name').value;
@@ -66,6 +83,7 @@ function logIn(){
     // Signed in
     //var user = userCredential.user;
 	console.log("Log In success");
+	getUserData(email);
 	window.location.href ='../quiz guide page/quizGuide.html';
     // ...
   })

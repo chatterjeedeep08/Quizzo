@@ -58,8 +58,8 @@ function changeWindow(){
 	window.location.href ='../quiz guide page/quizGuide.html';
 }
 
-function writeUserData(userId, first_name, last_name, email) {
-	db.collection("Users").doc(userId).set({
+function writeUserData(first_name, last_name, email) {
+	db.collection("Users").doc(email).set({
 		first_name: first_name,
 		last_name: last_name,
 		email: email
@@ -100,7 +100,8 @@ function signUp(){
 	.then((userCredential) => { 
 		const user = userCredential.user;
 		console.log("auth done");
-		writeUserData(user.uid, first_name, last_name, email);
+		localStorage.setItem("first_name", first_name);
+		writeUserData(first_name, last_name, email);
 	})
 	.catch((error) => {
 		const errorCode = error.code;
