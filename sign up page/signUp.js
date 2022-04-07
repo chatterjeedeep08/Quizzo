@@ -58,11 +58,12 @@ function changeWindow(){
 	window.location.href ='../quiz guide page/quizGuide.html';
 }
 
-function writeUserData(first_name, last_name, email) {
+function writeUserData(first_name, last_name, email, highscore) {
 	db.collection("Users").doc(email).set({
 		first_name: first_name,
 		last_name: last_name,
-		email: email
+		email: email,
+		highscore: highscore
 	}).then(() => {
 		console.log("data written");
 		setTimeout(function(){
@@ -77,6 +78,7 @@ function signUp(){
 	last_name= document.getElementById('last-name').value;
 	email= document.getElementById('Email').value;
 	password= document.getElementById('password').value;
+	var highscore=0;
 	popup = document.getElementById('popup');
 	
 	console.log(first_name);
@@ -101,7 +103,7 @@ function signUp(){
 		const user = userCredential.user;
 		console.log("auth done");
 		localStorage.setItem("first_name", first_name);
-		writeUserData(first_name, last_name, email);
+		writeUserData(first_name, last_name, email, highscore);
 	})
 	.catch((error) => {
 		const errorCode = error.code;

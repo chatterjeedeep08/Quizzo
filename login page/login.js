@@ -56,6 +56,8 @@ function getUserData(email){
 			console.log("Document data:", doc.data());
 			var first_name = data.first_name;
 			localStorage.setItem("first_name", first_name);
+			var email = data.email;
+			localStorage.setItem("email", email);
 		} else {
 			// doc.data() will be undefined in this case
 			console.log("No such document!");
